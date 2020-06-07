@@ -1,5 +1,6 @@
 import java.util.*;
 import java.io.*;
+import java.util.concurrent.atomic.*;
 
 class Configuration{
     public static final String LOG_FOLDER_PATH = "./spring-boot-server-logs";
@@ -108,6 +109,58 @@ class MultithreadedLogSearch implements ILogSearch{
     }
 }
 
+
+
+class MultithreadedLogSearchVolatile implements ILogSearch{
+    volatile int count;
+    public MultithreadedLogSearchVolatile(){
+        count = 0;
+    }
+    public int logSearch(String pattern) throws Exception {
+        List<File> files = FileUtility.getAllLogFiles(Configuration.LOG_FOLDER_PATH);
+        List<Thread> threadsList = new ArrayList<>();
+        for(File file : files){
+            threadsList.add(new Thread(){
+                public void run(){
+                    count += FileWordCount.wordCount(file, pattern);
+                }
+            });
+        }
+        for(Thread t : threadsList)
+            t.start();
+        for(Thread t : threadsList)
+            t.join();
+        return count;
+    }
+}
+
+
+class MultithreadedLogSearchAtomicInteger implements ILogSearch{
+    AtomicInteger count;
+    public MultithreadedLogSearchAtomicInteger(){
+        // count = 0;
+        count = new AtomicInteger(0);
+    }
+    public int logSearch(String pattern) throws Exception {
+        List<File> files = FileUtility.getAllLogFiles(Configuration.LOG_FOLDER_PATH);
+        List<Thread> threadsList = new ArrayList<>();
+        for(File file : files){
+            threadsList.add(new Thread(){
+                public void run(){
+                    int oldValue = count.get();
+                    int newValue = oldValue+FileWordCount.wordCount(file, pattern);
+                    count.compareAndSet(count.get(), newValue);
+                }
+            });
+        }
+        for(Thread t : threadsList)
+            t.start();
+        for(Thread t : threadsList)
+            t.join();
+        return count.get();
+    }
+}
+
 class TimeDecorator implements ILogSearch{ 
     ILogSearch decoratee;
     long timeTaken;
@@ -126,24 +179,25 @@ class TimeDecorator implements ILogSearch{
     public long getTimeTaken(){
         return timeTaken;
     }
-
 }
 
 public class BeingZeroLogSearch{
-    public static void main(String args[]) throws Exception {
+
+    static void countAndPrint(TimeDecorator td, String searchTerm, String type) throws Exception {
         Logger logger = new Logger();
+        int occurenceCount = td.logSearch(searchTerm);
+        long timeTakenInMs = td.getTimeTaken();
+        logger.info(String.format("%d ms, '%s' : '%s' occurs %d times.", timeTakenInMs, type, searchTerm, occurenceCount));
+    }
+    public static void main(String args[]) throws Exception {
         String searchTerm = "MongoSocketOpenException";
         
         searchTerm = "mongodb";
 
         TimeDecorator td = new TimeDecorator(new SingleThreadedLogSearch());
-        int occurenceCount = td.logSearch(searchTerm);
-        long timeTakenInMs = td.getTimeTaken();
-        logger.info(String.format("%d ms, '%s' : '%s' occurs %d times.", timeTakenInMs, "SingleThreadedLogSearch", searchTerm, occurenceCount));
-        
-        td = new TimeDecorator(new MultithreadedLogSearch());
-        occurenceCount = td.logSearch(searchTerm);
-        timeTakenInMs = td.getTimeTaken();
-        logger.info(String.format("%d ms, '%s' : '%s' occurs %d times.", timeTakenInMs, "MultithreadedLogSearch", searchTerm, occurenceCount));
+        countAndPrint(new TimeDecorator(new SingleThreadedLogSearch()), searchTerm, "SingleThreadedLogSearch");
+        countAndPrint(new TimeDecorator(new MultithreadedLogSearch()), searchTerm, "MultithreadedLogSearch");
+        countAndPrint(new TimeDecorator(new MultithreadedLogSearchAtomicInteger()), searchTerm, "MultithreadedLogSearchAtomicInteger");
+        countAndPrint(new TimeDecorator(new MultithreadedLogSearchVolatile()), searchTerm, "MultithreadedLogSearchVolatile");
     }
 }

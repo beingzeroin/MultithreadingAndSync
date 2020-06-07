@@ -147,9 +147,9 @@ class MultithreadedLogSearchAtomicInteger implements ILogSearch{
         for(File file : files){
             threadsList.add(new Thread(){
                 public void run(){
-                    int oldValue = count.get();
-                    int newValue = oldValue+FileWordCount.wordCount(file, pattern);
-                    count.compareAndSet(count.get(), newValue);
+                    while(!count.compareAndSet(count.get(), count.get()+FileWordCount.wordCount(file, pattern))){
+
+                    }
                 }
             });
         }

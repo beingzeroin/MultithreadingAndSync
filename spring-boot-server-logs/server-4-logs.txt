@@ -1,0 +1,378 @@
+Attaching to some-nginx, dockercompose-springboot-mongodb-nginx_app_1, some-mongo
+app_1      | [INFO] Scanning for projects...
+app_1      | [INFO] 
+app_1      | [INFO] --------------< org.springframework.boot:com.hellokoding >--------------
+app_1      | [INFO] Building dockercompose-springboot-mongodb-nginx 1.5.8.RELEASE
+app_1      | [INFO] --------------------------------[ jar ]---------------------------------
+some-nginx exited with code 0
+dockercompose-springboot-mongodb-nginx_app_1 exited with code 143
+some-mongo exited with code 14
+Attaching to some-nginx, dockercompose-springboot-mongodb-nginx_app_1, some-mongo
+some-nginx exited with code 0
+dockercompose-springboot-mongodb-nginx_app_1 exited with code 143
+some-mongo exited with code 14
+Attaching to dockercompose-springboot-mongodb-nginx_app_1, some-mongo
+app_1      | [INFO] Scanning for projects...
+app_1      | [INFO] 
+app_1      | [INFO] --------------< org.springframework.boot:com.hellokoding >--------------
+app_1      | [INFO] Building dockercompose-springboot-mongodb-nginx 1.5.8.RELEASE
+app_1      | [INFO] --------------------------------[ jar ]---------------------------------
+app_1      | [INFO] 
+app_1      | [INFO] --- maven-clean-plugin:2.6.1:clean (default-clean) @ com.hellokoding ---
+app_1      | [INFO] Deleting /app/target
+app_1      | [INFO] 
+app_1      | [INFO] >>> spring-boot-maven-plugin:1.5.8.RELEASE:run (default-cli) > test-compile @ com.hellokoding >>>
+app_1      | [INFO] 
+app_1      | [INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ com.hellokoding ---
+app_1      | [INFO] Using 'UTF-8' encoding to copy filtered resources.
+app_1      | [INFO] Copying 1 resource
+app_1      | [INFO] Copying 3 resources
+app_1      | [INFO] 
+app_1      | [INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ com.hellokoding ---
+app_1      | [INFO] Changes detected - recompiling the module!
+app_1      | [INFO] Compiling 2 source files to /app/target/classes
+app_1      | [INFO] 
+app_1      | [INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ com.hellokoding ---
+app_1      | [INFO] Using 'UTF-8' encoding to copy filtered resources.
+app_1      | [INFO] skip non existing resourceDirectory /app/src/test/resources
+app_1      | [INFO] 
+app_1      | [INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ com.hellokoding ---
+app_1      | [INFO] No sources to compile
+app_1      | [INFO] 
+app_1      | [INFO] <<< spring-boot-maven-plugin:1.5.8.RELEASE:run (default-cli) < test-compile @ com.hellokoding <<<
+app_1      | [INFO] 
+app_1      | [INFO] 
+app_1      | [INFO] --- spring-boot-maven-plugin:1.5.8.RELEASE:run (default-cli) @ com.hellokoding ---
+app_1      | 
+app_1      |   .   ____          _            __ _ _
+app_1      |  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+app_1      | ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+app_1      |  \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+app_1      |   '  |____| .__|_| |_|_| |_\__, | / / / /
+app_1      |  =========|_|==============|___/=/_/_/_/
+app_1      |  :: Spring Boot ::        (v1.5.8.RELEASE)
+app_1      | 
+app_1      | 2020-06-07 06:15:21.719  INFO 1 --- [           main] c.hellokoding.springboot.WebApplication  : Starting WebApplication on 35a7b9db4605 with PID 1 (/app/target/classes started by root in /app)
+app_1      | 2020-06-07 06:15:21.734  INFO 1 --- [           main] c.hellokoding.springboot.WebApplication  : No active profile set, falling back to default profiles: default
+app_1      | 2020-06-07 06:15:22.440  INFO 1 --- [           main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@4e2e6b0d: startup date [Sun Jun 07 06:15:22 UTC 2020]; root of context hierarchy
+app_1      | 2020-06-07 06:15:29.202  INFO 1 --- [           main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+app_1      | 2020-06-07 06:15:29.275  INFO 1 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+app_1      | 2020-06-07 06:15:29.282  INFO 1 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.23
+app_1      | 2020-06-07 06:15:29.940  INFO 1 --- [ost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+app_1      | 2020-06-07 06:15:29.946  INFO 1 --- [ost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 7538 ms
+app_1      | 2020-06-07 06:15:30.699  INFO 1 --- [ost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+app_1      | 2020-06-07 06:15:30.725  INFO 1 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+app_1      | 2020-06-07 06:15:30.730  INFO 1 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+app_1      | 2020-06-07 06:15:30.735  INFO 1 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+app_1      | 2020-06-07 06:15:30.743  INFO 1 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+app_1      | 2020-06-07 06:15:32.914  INFO 1 --- [           main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@4e2e6b0d: startup date [Sun Jun 07 06:15:22 UTC 2020]; root of context hierarchy
+app_1      | 2020-06-07 06:15:33.670  INFO 1 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/],methods=[GET]}" onto public java.lang.String com.hellokoding.springboot.IndexController.index(org.springframework.ui.Model)
+app_1      | 2020-06-07 06:15:33.693  INFO 1 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+app_1      | 2020-06-07 06:15:33.712  INFO 1 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+app_1      | 2020-06-07 06:15:34.108  INFO 1 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+app_1      | 2020-06-07 06:15:34.108  INFO 1 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+app_1      | 2020-06-07 06:15:34.285  INFO 1 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+app_1      | 2020-06-07 06:15:36.706  INFO 1 --- [           main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+app_1      | 2020-06-07 06:15:37.055  INFO 1 --- [localhost:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server localhost:27017
+app_1      | 
+app_1      | com.mongodb.MongoSocketOpenException: Exception opening socket
+app_1      | 	at com.mongodb.connection.SocketStream.open(SocketStream.java:62) ~[mongodb-driver-core-3.6.1.jar:na]
+app_1      | 	at com.mongodb.connection.InternalStreamConnection.open(InternalStreamConnection.java:126) ~[mongodb-driver-core-3.6.1.jar:na]
+app_1      | 	at com.mongodb.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:114) ~[mongodb-driver-core-3.6.1.jar:na]
+app_1      | 	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_181]
+app_1      | Caused by: java.net.ConnectException: Connection refused (Connection refused)
+app_1      | 	at java.net.PlainSocketImpl.socketConnect(Native Method) ~[na:1.8.0_181]
+app_1      | 	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[na:1.8.0_181]
+app_1      | 	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[na:1.8.0_181]
+app_1      | 	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[na:1.8.0_181]
+app_1      | 	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.8.0_181]
+app_1      | 	at java.net.Socket.connect(Socket.java:589) ~[na:1.8.0_181]
+app_1      | 	at com.mongodb.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:59) ~[mongodb-driver-core-3.6.1.jar:na]
+app_1      | 	at com.mongodb.connection.SocketStream.open(SocketStream.java:57) ~[mongodb-driver-core-3.6.1.jar:na]
+app_1      | 	... 3 common frames omitted
+app_1      | 
+app_1      | 2020-06-07 06:15:37.639  INFO 1 --- [           main] o.s.w.s.v.f.FreeMarkerConfigurer         : ClassTemplateLoader for Spring macros added to FreeMarker configuration
+app_1      | 2020-06-07 06:15:38.029  INFO 1 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+app_1      | 2020-06-07 06:15:38.389  INFO 1 --- [           main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+app_1      | 2020-06-07 06:15:38.415  INFO 1 --- [           main] c.hellokoding.springboot.WebApplication  : Started WebApplication in 20.359 seconds (JVM running for 92.734)
+some-nginx exited with code 0
+app_1      | 2020-06-07 06:16:17.164  INFO 1 --- [       Thread-4] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@4e2e6b0d: startup date [Sun Jun 07 06:15:22 UTC 2020]; root of context hierarchy
+app_1      | 2020-06-07 06:16:17.214  INFO 1 --- [       Thread-4] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+app_1      | [INFO] ------------------------------------------------------------------------
+app_1      | [INFO] BUILD SUCCESS
+app_1      | [INFO] ------------------------------------------------------------------------
+app_1      | [INFO] Total time: 01:55 min
+app_1      | [INFO] Finished at: 2020-06-07T06:16:17Z
+app_1      | [INFO] ------------------------------------------------------------------------
+dockercompose-springboot-mongodb-nginx_app_1 exited with code 143
+some-mongo exited with code 0
+Attaching to some-nginx, dockercompose-springboot-mongodb-nginx_app_1, some-mongo
+app_1      | [INFO] Scanning for projects...
+app_1      | [INFO] 
+app_1      | [INFO] --------------< org.springframework.boot:com.hellokoding >--------------
+app_1      | [INFO] Building dockercompose-springboot-mongodb-nginx 1.5.8.RELEASE
+app_1      | [INFO] --------------------------------[ jar ]---------------------------------
+app_1      | [INFO] 
+app_1      | [INFO] --- maven-clean-plugin:2.6.1:clean (default-clean) @ com.hellokoding ---
+app_1      | [INFO] Deleting /app/target
+app_1      | [INFO] 
+app_1      | [INFO] >>> spring-boot-maven-plugin:1.5.8.RELEASE:run (default-cli) > test-compile @ com.hellokoding >>>
+app_1      | [INFO] 
+app_1      | [INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ com.hellokoding ---
+app_1      | [INFO] Using 'UTF-8' encoding to copy filtered resources.
+app_1      | [INFO] Copying 1 resource
+app_1      | [INFO] Copying 3 resources
+app_1      | [INFO] 
+app_1      | [INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ com.hellokoding ---
+app_1      | [INFO] Changes detected - recompiling the module!
+app_1      | [INFO] Compiling 2 source files to /app/target/classes
+app_1      | [INFO] 
+app_1      | [INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ com.hellokoding ---
+app_1      | [INFO] Using 'UTF-8' encoding to copy filtered resources.
+app_1      | [INFO] skip non existing resourceDirectory /app/src/test/resources
+app_1      | [INFO] 
+app_1      | [INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ com.hellokoding ---
+app_1      | [INFO] No sources to compile
+app_1      | [INFO] 
+app_1      | [INFO] <<< spring-boot-maven-plugin:1.5.8.RELEASE:run (default-cli) < test-compile @ com.hellokoding <<<
+app_1      | [INFO] 
+app_1      | [INFO] 
+app_1      | [INFO] --- spring-boot-maven-plugin:1.5.8.RELEASE:run (default-cli) @ com.hellokoding ---
+app_1      | 
+app_1      |   .   ____          _            __ _ _
+app_1      |  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+app_1      | ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+app_1      |  \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+app_1      |   '  |____| .__|_| |_|_| |_\__, | / / / /
+app_1      |  =========|_|==============|___/=/_/_/_/
+app_1      |  :: Spring Boot ::        (v1.5.8.RELEASE)
+app_1      | 
+app_1      | 2020-06-07 06:15:21.719  INFO 1 --- [           main] c.hellokoding.springboot.WebApplication  : Starting WebApplication on 35a7b9db4605 with PID 1 (/app/target/classes started by root in /app)
+app_1      | 2020-06-07 06:15:21.734  INFO 1 --- [           main] c.hellokoding.springboot.WebApplication  : No active profile set, falling back to default profiles: default
+app_1      | 2020-06-07 06:15:22.440  INFO 1 --- [           main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@4e2e6b0d: startup date [Sun Jun 07 06:15:22 UTC 2020]; root of context hierarchy
+app_1      | 2020-06-07 06:15:29.202  INFO 1 --- [           main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+app_1      | 2020-06-07 06:15:29.275  INFO 1 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+app_1      | 2020-06-07 06:15:29.282  INFO 1 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.23
+app_1      | 2020-06-07 06:15:29.940  INFO 1 --- [ost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+app_1      | 2020-06-07 06:15:29.946  INFO 1 --- [ost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 7538 ms
+app_1      | 2020-06-07 06:15:30.699  INFO 1 --- [ost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+app_1      | 2020-06-07 06:15:30.725  INFO 1 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+app_1      | 2020-06-07 06:15:30.730  INFO 1 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+app_1      | 2020-06-07 06:15:30.735  INFO 1 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+app_1      | 2020-06-07 06:15:30.743  INFO 1 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+app_1      | 2020-06-07 06:15:32.914  INFO 1 --- [           main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@4e2e6b0d: startup date [Sun Jun 07 06:15:22 UTC 2020]; root of context hierarchy
+app_1      | 2020-06-07 06:15:33.670  INFO 1 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/],methods=[GET]}" onto public java.lang.String com.hellokoding.springboot.IndexController.index(org.springframework.ui.Model)
+app_1      | 2020-06-07 06:15:33.693  INFO 1 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+app_1      | 2020-06-07 06:15:33.712  INFO 1 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+app_1      | 2020-06-07 06:15:34.108  INFO 1 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+app_1      | 2020-06-07 06:15:34.108  INFO 1 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+app_1      | 2020-06-07 06:15:34.285  INFO 1 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+app_1      | 2020-06-07 06:15:36.706  INFO 1 --- [           main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+app_1      | 2020-06-07 06:15:37.055  INFO 1 --- [localhost:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server localhost:27017
+app_1      | 
+app_1      | com.mongodb.MongoSocketOpenException: Exception opening socket
+app_1      | 	at com.mongodb.connection.SocketStream.open(SocketStream.java:62) ~[mongodb-driver-core-3.6.1.jar:na]
+app_1      | 	at com.mongodb.connection.InternalStreamConnection.open(InternalStreamConnection.java:126) ~[mongodb-driver-core-3.6.1.jar:na]
+app_1      | 	at com.mongodb.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:114) ~[mongodb-driver-core-3.6.1.jar:na]
+app_1      | 	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_181]
+app_1      | Caused by: java.net.ConnectException: Connection refused (Connection refused)
+app_1      | 	at java.net.PlainSocketImpl.socketConnect(Native Method) ~[na:1.8.0_181]
+app_1      | 	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[na:1.8.0_181]
+app_1      | 	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[na:1.8.0_181]
+app_1      | 	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[na:1.8.0_181]
+app_1      | 	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.8.0_181]
+app_1      | 	at java.net.Socket.connect(Socket.java:589) ~[na:1.8.0_181]
+app_1      | 	at com.mongodb.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:59) ~[mongodb-driver-core-3.6.1.jar:na]
+app_1      | 	at com.mongodb.connection.SocketStream.open(SocketStream.java:57) ~[mongodb-driver-core-3.6.1.jar:na]
+app_1      | 	... 3 common frames omitted
+app_1      | 
+app_1      | 2020-06-07 06:15:37.639  INFO 1 --- [           main] o.s.w.s.v.f.FreeMarkerConfigurer         : ClassTemplateLoader for Spring macros added to FreeMarker configuration
+app_1      | 2020-06-07 06:15:38.029  INFO 1 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+app_1      | 2020-06-07 06:15:38.389  INFO 1 --- [           main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+app_1      | 2020-06-07 06:15:38.415  INFO 1 --- [           main] c.hellokoding.springboot.WebApplication  : Started WebApplication in 20.359 seconds (JVM running for 92.734)
+app_1      | 2020-06-07 06:16:17.164  INFO 1 --- [       Thread-4] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@4e2e6b0d: startup date [Sun Jun 07 06:15:22 UTC 2020]; root of context hierarchy
+app_1      | 2020-06-07 06:16:17.214  INFO 1 --- [       Thread-4] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+app_1      | [INFO] ------------------------------------------------------------------------
+app_1      | [INFO] BUILD SUCCESS
+app_1      | [INFO] ------------------------------------------------------------------------
+app_1      | [INFO] Total time: 01:55 min
+app_1      | [INFO] Finished at: 2020-06-07T06:16:17Z
+app_1      | [INFO] ------------------------------------------------------------------------
+app_1      | [INFO] Scanning for projects...
+app_1      | [INFO] 
+app_1      | [INFO] --------------< org.springframework.boot:com.hellokoding >--------------
+app_1      | [INFO] Building dockercompose-springboot-mongodb-nginx 1.5.8.RELEASE
+app_1      | [INFO] --------------------------------[ jar ]---------------------------------
+app_1      | [INFO] 
+app_1      | [INFO] --- maven-clean-plugin:2.6.1:clean (default-clean) @ com.hellokoding ---
+app_1      | [INFO] Deleting /app/target
+app_1      | [INFO] 
+app_1      | [INFO] >>> spring-boot-maven-plugin:1.5.8.RELEASE:run (default-cli) > test-compile @ com.hellokoding >>>
+app_1      | [INFO] 
+app_1      | [INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ com.hellokoding ---
+app_1      | [INFO] Using 'UTF-8' encoding to copy filtered resources.
+app_1      | [INFO] Copying 1 resource
+app_1      | [INFO] Copying 3 resources
+app_1      | [INFO] 
+app_1      | [INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ com.hellokoding ---
+app_1      | [INFO] Changes detected - recompiling the module!
+app_1      | [INFO] Compiling 2 source files to /app/target/classes
+app_1      | [INFO] 
+app_1      | [INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ com.hellokoding ---
+app_1      | [INFO] Using 'UTF-8' encoding to copy filtered resources.
+app_1      | [INFO] skip non existing resourceDirectory /app/src/test/resources
+app_1      | [INFO] 
+app_1      | [INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ com.hellokoding ---
+app_1      | [INFO] No sources to compile
+app_1      | [INFO] 
+app_1      | [INFO] <<< spring-boot-maven-plugin:1.5.8.RELEASE:run (default-cli) < test-compile @ com.hellokoding <<<
+app_1      | [INFO] 
+app_1      | [INFO] 
+app_1      | [INFO] --- spring-boot-maven-plugin:1.5.8.RELEASE:run (default-cli) @ com.hellokoding ---
+app_1      | 
+app_1      |   .   ____          _            __ _ _
+app_1      |  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+app_1      | ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+app_1      |  \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+app_1      |   '  |____| .__|_| |_|_| |_\__, | / / / /
+app_1      |  =========|_|==============|___/=/_/_/_/
+app_1      |  :: Spring Boot ::        (v1.5.8.RELEASE)
+app_1      | 
+app_1      | 2020-06-07 06:17:40.968  INFO 1 --- [           main] c.hellokoding.springboot.WebApplication  : Starting WebApplication on 35a7b9db4605 with PID 1 (/app/target/classes started by root in /app)
+app_1      | 2020-06-07 06:17:40.999  INFO 1 --- [           main] c.hellokoding.springboot.WebApplication  : No active profile set, falling back to default profiles: default
+app_1      | 2020-06-07 06:17:41.297  INFO 1 --- [           main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@2eed9552: startup date [Sun Jun 07 06:17:41 UTC 2020]; root of context hierarchy
+app_1      | 2020-06-07 06:17:47.505  INFO 1 --- [           main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+app_1      | 2020-06-07 06:17:47.571  INFO 1 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+app_1      | 2020-06-07 06:17:47.579  INFO 1 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.23
+app_1      | 2020-06-07 06:17:48.206  INFO 1 --- [ost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+app_1      | 2020-06-07 06:17:48.211  INFO 1 --- [ost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 6927 ms
+app_1      | 2020-06-07 06:17:48.897  INFO 1 --- [ost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+app_1      | 2020-06-07 06:17:48.917  INFO 1 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+app_1      | 2020-06-07 06:17:48.921  INFO 1 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+app_1      | 2020-06-07 06:17:48.927  INFO 1 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+app_1      | 2020-06-07 06:17:48.932  INFO 1 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+app_1      | 2020-06-07 06:17:50.581  INFO 1 --- [           main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@2eed9552: startup date [Sun Jun 07 06:17:41 UTC 2020]; root of context hierarchy
+app_1      | 2020-06-07 06:17:51.038  INFO 1 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/],methods=[GET]}" onto public java.lang.String com.hellokoding.springboot.IndexController.index(org.springframework.ui.Model)
+app_1      | 2020-06-07 06:17:51.051  INFO 1 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+app_1      | 2020-06-07 06:17:51.056  INFO 1 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+app_1      | 2020-06-07 06:17:51.181  INFO 1 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+app_1      | 2020-06-07 06:17:51.181  INFO 1 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+app_1      | 2020-06-07 06:17:51.342  INFO 1 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+app_1      | 2020-06-07 06:17:52.774  INFO 1 --- [           main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+app_1      | 2020-06-07 06:17:53.169  INFO 1 --- [localhost:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server localhost:27017
+app_1      | 
+app_1      | com.mongodb.MongoSocketOpenException: Exception opening socket
+app_1      | 	at com.mongodb.connection.SocketStream.open(SocketStream.java:62) ~[mongodb-driver-core-3.6.1.jar:na]
+app_1      | 	at com.mongodb.connection.InternalStreamConnection.open(InternalStreamConnection.java:126) ~[mongodb-driver-core-3.6.1.jar:na]
+app_1      | 	at com.mongodb.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:114) ~[mongodb-driver-core-3.6.1.jar:na]
+app_1      | 	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_181]
+app_1      | Caused by: java.net.ConnectException: Connection refused (Connection refused)
+app_1      | 	at java.net.PlainSocketImpl.socketConnect(Native Method) ~[na:1.8.0_181]
+app_1      | 	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[na:1.8.0_181]
+app_1      | 	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[na:1.8.0_181]
+app_1      | 	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[na:1.8.0_181]
+app_1      | 	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.8.0_181]
+app_1      | 	at java.net.Socket.connect(Socket.java:589) ~[na:1.8.0_181]
+app_1      | 	at com.mongodb.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:59) ~[mongodb-driver-core-3.6.1.jar:na]
+app_1      | 	at com.mongodb.connection.SocketStream.open(SocketStream.java:57) ~[mongodb-driver-core-3.6.1.jar:na]
+app_1      | 	... 3 common frames omitted
+app_1      | 
+app_1      | 2020-06-07 06:17:53.651  INFO 1 --- [           main] o.s.w.s.v.f.FreeMarkerConfigurer         : ClassTemplateLoader for Spring macros added to FreeMarker configuration
+app_1      | 2020-06-07 06:17:54.018  INFO 1 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+app_1      | 2020-06-07 06:17:54.292  INFO 1 --- [           main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+app_1      | 2020-06-07 06:17:54.313  INFO 1 --- [           main] c.hellokoding.springboot.WebApplication  : Started WebApplication in 15.166 seconds (JVM running for 83.923)
+app_1      | 2020-06-07 06:18:55.956  INFO 1 --- [       Thread-4] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@2eed9552: startup date [Sun Jun 07 06:17:41 UTC 2020]; root of context hierarchy
+app_1      | 2020-06-07 06:18:55.992  INFO 1 --- [       Thread-4] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+app_1      | [INFO] ------------------------------------------------------------------------
+app_1      | [INFO] BUILD SUCCESS
+app_1      | [INFO] ------------------------------------------------------------------------
+app_1      | [INFO] Total time: 02:11 min
+dockercompose-springboot-mongodb-nginx_app_1 exited with code 143
+app_1      | [INFO] Scanning for projects...
+app_1      | [INFO] 
+app_1      | [INFO] --------------< org.springframework.boot:com.hellokoding >--------------
+app_1      | [INFO] Building dockercompose-springboot-mongodb-nginx 1.5.8.RELEASE
+app_1      | [INFO] --------------------------------[ jar ]---------------------------------
+app_1      | [INFO] 
+app_1      | [INFO] --- maven-clean-plugin:2.6.1:clean (default-clean) @ com.hellokoding ---
+app_1      | [INFO] Deleting /app/target
+app_1      | [INFO] 
+app_1      | [INFO] >>> spring-boot-maven-plugin:1.5.8.RELEASE:run (default-cli) > test-compile @ com.hellokoding >>>
+app_1      | [INFO] 
+app_1      | [INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ com.hellokoding ---
+app_1      | [INFO] Using 'UTF-8' encoding to copy filtered resources.
+app_1      | [INFO] Copying 1 resource
+app_1      | [INFO] Copying 3 resources
+app_1      | [INFO] 
+app_1      | [INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ com.hellokoding ---
+app_1      | [INFO] Changes detected - recompiling the module!
+app_1      | [INFO] Compiling 2 source files to /app/target/classes
+app_1      | [INFO] 
+app_1      | [INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ com.hellokoding ---
+app_1      | [INFO] Using 'UTF-8' encoding to copy filtered resources.
+app_1      | [INFO] skip non existing resourceDirectory /app/src/test/resources
+app_1      | [INFO] 
+app_1      | [INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ com.hellokoding ---
+app_1      | [INFO] No sources to compile
+app_1      | [INFO] 
+app_1      | [INFO] <<< spring-boot-maven-plugin:1.5.8.RELEASE:run (default-cli) < test-compile @ com.hellokoding <<<
+app_1      | [INFO] 
+app_1      | [INFO] 
+app_1      | [INFO] --- spring-boot-maven-plugin:1.5.8.RELEASE:run (default-cli) @ com.hellokoding ---
+app_1      | 
+app_1      |   .   ____          _            __ _ _
+app_1      |  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+app_1      | ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+app_1      |  \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+app_1      |   '  |____| .__|_| |_|_| |_\__, | / / / /
+app_1      |  =========|_|==============|___/=/_/_/_/
+app_1      |  :: Spring Boot ::        (v1.5.8.RELEASE)
+app_1      | 
+app_1      | 2020-06-07 06:19:47.847  INFO 1 --- [           main] c.hellokoding.springboot.WebApplication  : Starting WebApplication on 35a7b9db4605 with PID 1 (/app/target/classes started by root in /app)
+app_1      | 2020-06-07 06:19:47.862  INFO 1 --- [           main] c.hellokoding.springboot.WebApplication  : No active profile set, falling back to default profiles: default
+app_1      | 2020-06-07 06:19:48.175  INFO 1 --- [           main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@19ff0829: startup date [Sun Jun 07 06:19:48 UTC 2020]; root of context hierarchy
+app_1      | 2020-06-07 06:19:56.153  INFO 1 --- [           main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+app_1      | 2020-06-07 06:19:56.302  INFO 1 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+app_1      | 2020-06-07 06:19:56.335  INFO 1 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.23
+app_1      | 2020-06-07 06:19:57.520  INFO 1 --- [ost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+app_1      | 2020-06-07 06:19:57.528  INFO 1 --- [ost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 9363 ms
+app_1      | 2020-06-07 06:19:58.734  INFO 1 --- [ost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+app_1      | 2020-06-07 06:19:58.754  INFO 1 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+app_1      | 2020-06-07 06:19:58.758  INFO 1 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+app_1      | 2020-06-07 06:19:58.762  INFO 1 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+app_1      | 2020-06-07 06:19:58.762  INFO 1 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+app_1      | 2020-06-07 06:20:00.341  INFO 1 --- [           main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@19ff0829: startup date [Sun Jun 07 06:19:48 UTC 2020]; root of context hierarchy
+app_1      | 2020-06-07 06:20:00.687  INFO 1 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/],methods=[GET]}" onto public java.lang.String com.hellokoding.springboot.IndexController.index(org.springframework.ui.Model)
+app_1      | 2020-06-07 06:20:00.696  INFO 1 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+app_1      | 2020-06-07 06:20:00.700  INFO 1 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+app_1      | 2020-06-07 06:20:00.840  INFO 1 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+app_1      | 2020-06-07 06:20:00.844  INFO 1 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+app_1      | 2020-06-07 06:20:01.110  INFO 1 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+app_1      | 2020-06-07 06:20:02.617  INFO 1 --- [           main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+app_1      | 2020-06-07 06:20:03.009  INFO 1 --- [localhost:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server localhost:27017
+app_1      | 
+app_1      | com.mongodb.MongoSocketOpenException: Exception opening socket
+app_1      | 	at com.mongodb.connection.SocketStream.open(SocketStream.java:62) ~[mongodb-driver-core-3.6.1.jar:na]
+app_1      | 	at com.mongodb.connection.InternalStreamConnection.open(InternalStreamConnection.java:126) ~[mongodb-driver-core-3.6.1.jar:na]
+app_1      | 	at com.mongodb.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:114) ~[mongodb-driver-core-3.6.1.jar:na]
+app_1      | 	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_181]
+app_1      | Caused by: java.net.ConnectException: Connection refused (Connection refused)
+app_1      | 	at java.net.PlainSocketImpl.socketConnect(Native Method) ~[na:1.8.0_181]
+app_1      | 	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[na:1.8.0_181]
+app_1      | 	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[na:1.8.0_181]
+app_1      | 	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[na:1.8.0_181]
+app_1      | 	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.8.0_181]
+app_1      | 	at java.net.Socket.connect(Socket.java:589) ~[na:1.8.0_181]
+app_1      | 	at com.mongodb.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:59) ~[mongodb-driver-core-3.6.1.jar:na]
+app_1      | 	at com.mongodb.connection.SocketStream.open(SocketStream.java:57) ~[mongodb-driver-core-3.6.1.jar:na]
+app_1      | 	... 3 common frames omitted
+app_1      | 
+app_1      | 2020-06-07 06:20:03.516  INFO 1 --- [           main] o.s.w.s.v.f.FreeMarkerConfigurer         : ClassTemplateLoader for Spring macros added to FreeMarker configuration
+app_1      | 2020-06-07 06:20:03.973  INFO 1 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+app_1      | 2020-06-07 06:20:04.282  INFO 1 --- [           main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+app_1      | 2020-06-07 06:20:04.302  INFO 1 --- [           main] c.hellokoding.springboot.WebApplication  : Started WebApplication in 18.38 seconds (JVM running for 67.016)
+some-nginx exited with code 0
+app_1      | 2020-06-07 06:20:19.597  INFO 1 --- [       Thread-4] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@19ff0829: startup date [Sun Jun 07 06:19:48 UTC 2020]; root of context hierarchy
+app_1      | 2020-06-07 06:20:19.633  INFO 1 --- [       Thread-4] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+app_1      | [INFO] -----------------------------------------dockercompose-springboot-mongodb-nginx_app_1 exited with code 143
+some-mongo exited with code 0

@@ -16,8 +16,10 @@ class FileUtility {
     }
 }
 
-
-class SingleThreadedLogSearch{
+interface IntAnswerStringInputFunction{
+    public int logSearch(String pattern) throws Exception;
+}
+class SingleThreadedLogSearch implements IntAnswerStringInputFunction{
     public SingleThreadedLogSearch(){
     }
     public int logSearch(String pattern) throws Exception {
@@ -38,10 +40,26 @@ class SingleThreadedLogSearch{
     }
 }
 
+class TimeDecorator implements IntAnswerStringInputFunction{ 
+    IntAnswerStringInputFunction decoratee;
+    public TimeDecorator(IntAnswerStringInputFunction decoratee){
+        this.decoratee = decoratee;
+    }
+    public int logSearch(String pattern) throws Exception {
+        long startTime = System.currentTimeMillis();
+        int ans = decoratee.logSearch(pattern);
+        long endTime = System.currentTimeMillis();
+        System.out.println("Time Taken: "+ (endTime-startTime) + " ms");
+        return ans;
+    } 
+}
 
 public class BeingZeroLogSearch{
     public static void main(String args[]) throws Exception {
         SingleThreadedLogSearch stls = new SingleThreadedLogSearch();
-        System.out.println(stls.logSearch("MongoSocketOpenException"));
+        TimeDecorator td = new TimeDecorator(stls);
+        String searchTerm = "MongoSocketOpenException";
+        searchTerm = "mongodb";
+        System.out.println("\'"+searchTerm+"\'" + " occurs "+ td.logSearch(searchTerm) + " times.");
     }
 }

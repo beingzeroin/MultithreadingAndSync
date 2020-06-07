@@ -202,8 +202,9 @@ class MultithreadedLogSearchSynchronizedBlock implements ILogSearch{
         for(File file : files){
             threadsList.add(new Thread(){
                 public void run(){
+                    int curCount = FileWordCount.wordCount(file, pattern);
                     synchronized(lockObject){
-                        count += FileWordCount.wordCount(file, pattern);
+                        count += curCount;
                     }
                 }
             });

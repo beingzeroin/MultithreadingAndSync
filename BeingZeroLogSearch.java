@@ -161,6 +161,62 @@ class MultithreadedLogSearchAtomicInteger implements ILogSearch{
     }
 }
 
+
+class MultithreadedLogSearchSynchronizedFunction implements ILogSearch{
+    volatile int count;
+    public MultithreadedLogSearchSynchronizedFunction(){
+        count = 0;
+    }
+    synchronized void calculateAndUpdate(File file, String pattern){
+        count += FileWordCount.wordCount(file, pattern);
+    }
+    public int logSearch(String pattern) throws Exception {
+        List<File> files = FileUtility.getAllLogFiles(Configuration.LOG_FOLDER_PATH);
+        List<Thread> threadsList = new ArrayList<>();
+        for(File file : files){
+            threadsList.add(new Thread(){
+                public void run(){
+                    calculateAndUpdate(file, pattern);
+                }
+            });
+        }
+        for(Thread t : threadsList)
+            t.start();
+        for(Thread t : threadsList)
+            t.join();
+        return count;
+    }
+}
+
+
+class MultithreadedLogSearchSynchronizedBlock implements ILogSearch{
+    volatile int count;
+    Object lockObject;
+    public MultithreadedLogSearchSynchronizedBlock(){
+        count = 0;
+        lockObject = new Object();
+    }
+    public int logSearch(String pattern) throws Exception {
+        List<File> files = FileUtility.getAllLogFiles(Configuration.LOG_FOLDER_PATH);
+        List<Thread> threadsList = new ArrayList<>();
+        for(File file : files){
+            threadsList.add(new Thread(){
+                public void run(){
+                    synchronized(lockObject){
+                        count += FileWordCount.wordCount(file, pattern);
+                    }
+                }
+            });
+        }
+        for(Thread t : threadsList)
+            t.start();
+        for(Thread t : threadsList)
+            t.join();
+        return count;
+    }
+}
+
+
 class TimeDecorator implements ILogSearch{ 
     ILogSearch decoratee;
     long timeTaken;
@@ -187,7 +243,7 @@ public class BeingZeroLogSearch{
         Logger logger = new Logger();
         int occurenceCount = td.logSearch(searchTerm);
         long timeTakenInMs = td.getTimeTaken();
-        logger.info(String.format("%d ms, '%s' : '%s' occurs %d times.", timeTakenInMs, type, searchTerm, occurenceCount));
+        logger.info(String.format("%-3d ms : %-45s : '%s' occurs %d times.", timeTakenInMs, type, searchTerm, occurenceCount));
     }
     public static void main(String args[]) throws Exception {
         String searchTerm = "MongoSocketOpenException";
@@ -199,5 +255,7 @@ public class BeingZeroLogSearch{
         countAndPrint(new TimeDecorator(new MultithreadedLogSearch()), searchTerm, "MultithreadedLogSearch");
         countAndPrint(new TimeDecorator(new MultithreadedLogSearchAtomicInteger()), searchTerm, "MultithreadedLogSearchAtomicInteger");
         countAndPrint(new TimeDecorator(new MultithreadedLogSearchVolatile()), searchTerm, "MultithreadedLogSearchVolatile");
+        countAndPrint(new TimeDecorator(new MultithreadedLogSearchSynchronizedFunction()), searchTerm, "MultithreadedLogSearchSynchronizedFunction");
+        countAndPrint(new TimeDecorator(new MultithreadedLogSearchSynchronizedBlock()), searchTerm, "MultithreadedLogSearchSynchronizedBlock");
     }
 }
